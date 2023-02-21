@@ -91,7 +91,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
 
     # DRF
-    'drf',
+    # 'drf',
     'rest_framework',
 
     # CORS 

@@ -5,7 +5,7 @@ from . import views
 from rest_framework import routers
 from . import views
 
-# 외부에서는 그냥 blog_posts로 접근하도록 라우팅 기능 추가
+# 외부에서는 그냥 blog/posts로 접근하도록 라우팅 기능 추가
 router = routers.DefaultRouter()
 router.register(r'posts', views.BlogPostViewset) 
 
@@ -20,7 +20,7 @@ urlpatterns = [
 
     # 오후 실습: Swagger API 
     # 2개의 경로가 나온다면 본체의 urls.py에 있는 path('', include('blog.urls')), 때문입니다. 
-    re_path(r'^',include(router.urls)),
+    re_path(r'^blog/',include(router.urls)),
 
     path('', views.BlogHome.as_view(paginate_by=5), name="home"),
     # paginate_by=개수: 속성들은 urls.py에서 호출할 때 아규먼트로 주거나 
