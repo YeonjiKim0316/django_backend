@@ -25,8 +25,9 @@ SECRET_KEY = "django-insecure-t2yib&rf5^v^jdnb=w65*qd0qx+p1j0ml-@m8jc99@i$fu(#+q
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# DEBUG = False  # 배포시에는 False로 변경해주셔야 에러메시지가 남에게 노출되지 않습니다.
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['atangi.pythonanywhere.com', 'localhost'] # 이 경로로 접속한 사람만 에러메시지나 로그를 확인할 수 있습니다
 
 
 # Application definition
@@ -162,7 +163,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, '_media')
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-# SITE_ID = 1 # 배포할 때 site 중 n번째 사이트와 연결하겠다는 의미
+SITE_ID = 3 # 배포할 때 site 중 n번째 사이트와 연결하겠다는 의미
 
 # ACCOUNT_EMAIL_REQUIRED = True  # 어느 필드까지 우선으로 받을 것인지
 # ACCOUNT_EMAIL_VERIFICATION = 'none' # 메일 인증 필요한 경우 받을 수 있음
